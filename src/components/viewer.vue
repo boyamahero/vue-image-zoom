@@ -2,7 +2,6 @@
   transition(name="image-zoom-fade", @before-enter="lockScroll")
     .__image-zoom__modal(v-show="visible", @click="modalClicked", :id="id")
       .__image-zoom__close-container
-        button.__image-zoom__button.__image-zoom__close-button(@click.stop="openExternal") ↗
         button.__image-zoom__button.__image-zoom__close-button(@click.stop="close") &times;
       .__image-zoom__img-outer-container(:style="{ display: verticalCenter ? 'table' : 'block' }")
         .__image-zoom__img-inner-container(:style="{ display: verticalCenter ? 'table-cell' : 'block' }")
@@ -16,7 +15,7 @@
 
 <script>
 
-const scaleList = [10, 25, 30, 33, 40, 50, 60, 67, 75, 90, 100, 110, 125, 150, 200, 250, 300, 400, 600, 800];
+const scaleList = [20, 25, 30, 33, 40, 50, 60, 67, 75, 90, 100, 110, 125, 150, 200, 250, 300, 400, 600, 800];
 const defaultScaleLevel = 10;
 
 export default {
